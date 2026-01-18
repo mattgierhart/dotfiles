@@ -1,0 +1,11 @@
+# Global mise configuration
+# Synced across machines via chezmoi
+
+[tools]
+node = "lts"
+
+[env]
+EDITOR = "code"
+
+[settings]
+experimental = true

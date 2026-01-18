@@ -1,0 +1,35 @@
+# NVM setup
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Bun setup
+[ -s "/Users/mattgierhart/.bun/_bun" ] && source "/Users/mattgierhart/.bun/_bun"
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Local environment (installed packages)
+. "$HOME/.local/bin/env"
+
+# Docker CLI completions
+fpath=(/Users/mattgierhart/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+# Homebrew
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Claude CLI alias
+alias claude="/Users/mattgierhart/.claude/local/claude"
+
+# Antigravity
+export PATH="/Users/mattgierhart/.antigravity/antigravity/bin:$PATH"
+
+# mise activation
+eval "$(/Users/mattgierhart/.local/bin/mise activate zsh)"
+
+# fzf integration
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load local secrets (not synced via chezmoi)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
