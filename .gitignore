@@ -1,0 +1,19 @@
+# Secrets and local config
+*.local
+.env
+.env.*
+*.secret
+
+# Temp/scratchpad (session-specific, not persisted)
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
